@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+	    <title>ZARA Compliance</title>
+	    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+	    
+	    <!-- CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	    <link href="css/main.css" rel="stylesheet" type="text/css" />
+	    <!-- JS -->
+	    <script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="js/bootstrap.min.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="js/android/cordova-2.7.0.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="js/appinit.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="js/fileopener.js"></script>
+	    <script type="text/javascript" charset="utf-8">
+	    document.addEventListener("deviceready", function(){
+	    	callSearch();
+		    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+	   	},true);
+	    </script>
+    </head>
+    <body>
+	    <div id="wrapper">
+			<div id="dialog-overlay">
+			    <div class="modal-header">
+			    	<h3 id="info-title-dialog">Abruf wird durchgef&uuml;hrt</h3>
+			    </div>
+			    <div>
+			    <p id="settings-dialog">
+			    	<img src="img/zara-compliance.jpg" alt="ZARA Compliance" /><br />
+			    	Laden der Daten...<br />
+			    	<img src="img/loadbar.gif" />
+			    </p>
+			    </div>
+			    <div class="modal-footer">
+			    	<a href="index.html" class="btn">Schlie&szlig;en</a>
+			    </div>
+		    </div>
+	    </div>
+    </body>
+</html>

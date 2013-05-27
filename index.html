@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+	    <title>ZARA Compliance</title>
+	    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+	    
+	    <!-- CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	    <link href="css/main.css" rel="stylesheet" type="text/css" />
+	    <!-- JS -->
+	    <script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="js/bootstrap.min.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="js/android/cordova-2.7.0.js"></script>
+	    <script type="text/javascript" charset="utf-8" src="js/appinit.js"></script>
+	    <script type="text/javascript" charset="utf-8">
+	    document.addEventListener("deviceready", function(){
+	    	var x = onDeviceReady();
+		    // alert('345' + x);
+	   	},true);
+	    </script>
+    </head>
+    <body>
+    	<div id="toolbar" class="verlauf1">
+    		<a id="go-settings" href="settings.html" class="btn"><i class="icon-wrench"></i></a>
+    	</div>
+    	<img src="img/zara-compliance.jpg" alt="ZARA Compliance" />
+	    <div id="wrapper">
+		    <p>Neue Suche:</p>
+		    <form id="search-form" action="ergebnisse.html" method="get">
+			    <input id="keysearch" name="keysearch" type="text" placeholder="Name, Suchwort" />
+			    <input id="minvalue" name="minvalue" type="number" value="80" /><br />
+			    <input type="submit" class="btn" value="Suche starten" />
+		    </form>
+		    <hr />
+		    Letzte Suche:
+		    <table class="table">
+		    	<thead>
+		    		<tr class="verlauf1">
+		    			<td>Status</td>
+		    			<td>Name</td>
+		    			<td>Durchschnitt</td>
+		    			<td>Ergebnis</td>
+		    		</tr>
+		    	</thead>
+		    	<tbody id="last-search-body">
+			    	<tr class="">
+			    		<td colspan="4"><i class="icon-ok"></i> Suchabfragen werden geladen</td>
+			    	</tr>
+		    	</tbody>
+		    </table>
+	   		<div id="version"></div>
+	   		<a id="programm-info" href="#" onclick="showInformation()">Info</a>
+	    </div>
+    </body>
+</html>
